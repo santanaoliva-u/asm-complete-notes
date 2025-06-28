@@ -23,12 +23,18 @@ created: 2025-06-27
 last_modified: 
 version: 1.0.0
 status: stable
-updated_by: TuNombre
+updated_by: santanaoliva_u
 ---
+
 # x86-64 NASM Cheatsheet
+
+
 
 > [!NOTE]  
 > Referencia definitiva para aprender ASM (x86-64, NASM) en Arch Linux 2025. Diseñado para Obsidian con soporte para Dataview, Excalidraw, y Codeblock. Cubre desde fundamentos hasta hacking ofensivo.
+
+
+
 
 > **Arquitectura:** x86-64 (64 bits, sintaxis NASM)  
 > **Entorno:** Arch Linux 2025, NASM, GDB, Radare2, Cutter, pwntools, Docker, QEMU  
@@ -43,10 +49,13 @@ updated_by: TuNombre
 > ```
 >  **Seguridad:** Ejecutar exploits en Docker (`docker run -it -v $(pwd):/workspace ubuntu:24.04`) o QEMU (`qemu-x86_64`).  
 
+
 > [!WARNING]  
 > Los niveles 50-100 (buffer overflow, shellcode, inyección) deben ejecutarse en entornos aislados para evitar daños al sistema. Ver [[100.02_Inyeccion_en_Stack]].
 
 ---
+
+
 
 ## Índice de Categorías
 
@@ -61,7 +70,10 @@ updated_by: TuNombre
 - [Mapa de Registros](#mapa-de-registros)  
 - [Dataview Queries](#dataview-queries)  
 
+
+
 ---
+
 
 ## Transferencia de Datos
 Ver Instrucciones
@@ -145,18 +157,20 @@ Instrucciones
 
 Instrucciones
 
-| Mnemónico | Operandos | Descripción | Ciclos (Aprox.) | Opcode (Ejemplo) | Banderas | Ejemplo | Submódulo |
-|-----------|-----------|-------------|-----------------|------------------|----------|---------|-----------|
-| PUSH      | src       | Empuja a stack | 1-3 | `50 +r` | Ninguna | ```asm<br>push rax``` | [[20.01_PUSH_y_POP]] |
-| POP       | dst       | Saca del stack | 1-3 | `58 +r` | Ninguna | ```asm<br>pop rbx``` | [[20.01_PUSH_y_POP]] |
-| CALL      | target    | Llama función | 3-5 | `E8 cd` | Ninguna | ```asm<br>call func``` | [[20.02_CALL_y_RET]] |
-| RET       | —         | Retorno de función | 3-5 | `C3` | Ninguna | ```asm<br>ret``` | [[20.02_CALL_y_RET]] |
-| ENTER     | imm, imm  | Crea marco de pila | 10-12 | `C8 iw ib` | Ninguna | ```asm<br>enter 0x10, 0``` | [[20.04_Estructura_de_Funciones]] |
-| LEAVE     | —         | Libera marco de pila | 3 | `C9` | Ninguna | ```asm<br>leave``` | [[20.04_Estructura_de_Funciones]] |
+| Mnemónico | Operandos | Descripción          | Ciclos (Aprox.) | Opcode (Ejemplo) | Banderas | Ejemplo                    | Submódulo                         |
+| --------- | --------- | -------------------- | --------------- | ---------------- | -------- | -------------------------- | --------------------------------- |
+| PUSH      | src       | Empuja a stack       | 1-3             | `50 +r`          | Ninguna  | ```asm<br>push rax```      | [[20.01_PUSH_y_POP]]              |
+| POP       | dst       | Saca del stack       | 1-3             | `58 +r`          | Ninguna  | ```asm<br>pop rbx```       | [[20.01_PUSH_y_POP]]              |
+| CALL      | target    | Llama función        | 3-5             | `E8 cd`          | Ninguna  | ```asm<br>call func```     | [[20.02_CALL_y_RET]]              |
+| RET       | —         | Retorno de función   | 3-5             | `C3`             | Ninguna  | ```asm<br>ret```           | [[20.02_CALL_y_RET]]              |
+| ENTER     | imm, imm  | Crea marco de pila   | 10-12           | `C8 iw ib`       | Ninguna  | ```asm<br>enter 0x10, 0``` | [[20.04_Estructura_de_Funciones]] |
+| LEAVE     | —         | Libera marco de pila | 3               | `C9`             | Ninguna  | ```asm<br>leave```         | [[20.04_Estructura_de_Funciones]] |
 
 > [!TIP]  
 > - **System V ABI:** Argumentos en RDI, RSI, RDX, RCX, R8, R9. Ver [[20.06_Convenciones_de_Llamada]].  
 > - **PUSH/POP:** Clave en exploits de buffer overflow. Ver [[50.03_Control_de_Flujo]].
+
+
 
 > [!EXAMPLE] Ejemplo de Función  
 > ```asm  
@@ -182,6 +196,7 @@ Instrucciones
 |-----------|-----------|-------------|-----------------|------------------|----------|---------|-----------|
 | SYSCALL   | —         | Llamada al sistema | Varía | `0F 05` | Depende | ```asm<br>mov rax, 1<br>syscall``` | [[30.01_Syscalls_Write_Read]], [[65.01_Syscalls_Complejas]] |
 
+
 > [!EXAMPLE] Syscall: write  
 > ```asm  
 > section .data  
@@ -199,6 +214,7 @@ Instrucciones
 >     xor rdi, rdi  ; status: 0  
 >     syscall  
 > ```
+
 
 > [!TIP]  
 > - **Syscalls Comunes:** write (1), read (0), exit (60), execve (59). Ver [[65.02_Execve_Avanzado]].  
