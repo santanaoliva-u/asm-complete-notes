@@ -46,8 +46,6 @@ _____
 
 
 
-Mi **Ruta:** `~/Documents/OBSIDIAN/Programacion/01_Estudio/03_ASM/`
-
 > [!NOTE]  
 > Guía definitiva para aprender ensamblador x86-64 (NASM) en Arch Linux 2025, desde fundamentos hasta hacking ofensivo. Optimizada para Obsidian con soporte para Dataview, Excalidraw, Canvas, y Codeblock. En GitHub, usa los enlaces relativos para navegar.
 
@@ -87,6 +85,9 @@ Este vault es una guía estructurada para aprender ensamblador x86-64 (NASM) en 
 
 > [!TIP]  
 > Usa Canvas en Obsidian para mapear niveles o crea un Excalidraw para visualizar el stack. En GitHub, navega con los enlaces relativos.
+
+> **Excalidraw: Mapa de Aprendizaje**  
+> Crea un canvas con nodos para cada nivel, conectando al cheatsheet y changelog. Ver [[20.04_Estructura_de_Funciones]] ([20_Stack_y_Funciones/20.04_Estructura_de_Funciones/Apuntes/20.04_Estructura_de_Funciones.md](20_Stack_y_Funciones/20.04_Estructura_de_Funciones/Apuntes/20.04_Estructura_de_Funciones.md)).
 
 ---
 
