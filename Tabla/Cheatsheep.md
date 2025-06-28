@@ -35,18 +35,17 @@ updated_by: santanaoliva_u
 
 
 
-
 > **Arquitectura:** x86-64 (64 bits, sintaxis NASM)  
 > **Entorno:** Arch Linux 2025, NASM, GDB, Radare2, Cutter, pwntools, Docker, QEMU  
 > **Enlaces:** [[README]] | [[00_MOV_y_Registros_Basicos/index]] | [[100_Shellcode_Injection/index]] | [[105_Proyectos_Avanzados/index]]  
 
 **Instalación:**  
 ```bash  
-> sudo pacman -Syu  
-> sudo pacman -S nasm gdb radare2 cutter python-pwntools docker qemu  
-> yay -S obsidian  
-> sudo usermod -aG docker $USER  
-> ```
+sudo pacman -Syu  
+sudo pacman -S nasm gdb radare2 cutter python-pwntools docker qemu  
+yay -S obsidian  
+sudo usermod -aG docker $USER  
+```
 
 
 **Seguridad:** Ejecutar exploits en Docker (`docker run -it -v $(pwd):/workspace ubuntu:24.04`) o QEMU (`qemu-x86_64`).  
