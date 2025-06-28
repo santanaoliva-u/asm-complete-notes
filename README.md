@@ -31,9 +31,22 @@ updated_by: TuNombre
 
 # Vault ASM (x86-64, NASM)
 
-![Estado: Estable](https://img.shields.io/badge/Estado-Estable-green)  
-**Repositorio:** [Vault ASM en GitHub](<URL_DEL_REPOSITORIO>)  
-**Ruta:** `~/Documents/OBSIDIAN/Programacion/01_Estudio/03_ASM/`
+-----------------
+![Estado: Estable](https://img.shields.io/badge/Estado-Estable-green)
+![Versión: 1.0.0](https://img.shields.io/badge/Versión-1.0.0-blue)
+![Lenguaje: ASM x86-64](https://img.shields.io/badge/Lenguaje-ASM%20x86--64-lightgrey)
+![Herramientas: NASM, GDB, Radare2](https://img.shields.io/badge/Herramientas-NASM%2C%20GDB%2C%20Radare2-blue)
+![Obsidian: Compatible](https://img.shields.io/badge/Obsidian-Compatible-purple)
+![Entorno: Arch Linux 2025](https://img.shields.io/badge/Entorno-Arch%20Linux%202025-1793d1)
+![Licencia: MIT](https://img.shields.io/badge/Licencia-MIT-yellow)
+![Hacking: Pwnable](https://img.shields.io/badge/Hacking-Pwnable-orange)
+![Comunidad: CTFtime](https://img.shields.io/badge/Comunidad-CTFtime-red)
+![Última Actualización: Junio 2025](https://img.shields.io/badge/Última%20Actualización-Junio%202025-informational)
+_____
+
+
+
+Mi **Ruta:** `~/Documents/OBSIDIAN/Programacion/01_Estudio/03_ASM/`
 
 > [!NOTE]  
 > Guía definitiva para aprender ensamblador x86-64 (NASM) en Arch Linux 2025, desde fundamentos hasta hacking ofensivo. Optimizada para Obsidian con soporte para Dataview, Excalidraw, Canvas, y Codeblock. En GitHub, usa los enlaces relativos para navegar.
