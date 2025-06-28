@@ -78,36 +78,36 @@ Este vault es una guía estructurada para aprender ensamblador x86-64 (NASM) en 
 
 ### Principiante
 
-- [[00_MOV_y_Registros_Basicos/index]] - Introducción a MOV y registros.  
-- [[05_Operaciones_Aritmeticas/index]] - Sumas, restas, multiplicaciones, y banderas.  
-- [[10_Saltos_y_Control_de_Flujo/index]] - Saltos, comparaciones, y bucles.  
-- [[15_Logica_y_Manipulacion_de_Bits/index]] - Operaciones lógicas y desplazamientos.  
-- [[20_Stack_y_Funciones/index]] - Gestión de pila y funciones.  
-- [[25_Segmentos_de_Memoria/index]] - Secciones `.data`, `.bss`, y variables.  
-- [[30_Entrada_Salida/index]] - Syscalls para entrada/salida.  
-- [[35_Strings_y_Estructuras/index]] - Manipulación de strings y estructuras.  
+ [[00_MOV_y_Registros_Basicos/index]] - Introducción a MOV y registros.  
+ [[05_Operaciones_Aritmeticas/index]] - Sumas, restas, multiplicaciones, y banderas.  
+ [[10_Saltos_y_Control_de_Flujo/index]] - Saltos, comparaciones, y bucles.  
+ [[15_Logica_y_Manipulacion_de_Bits/index]] - Operaciones lógicas y desplazamientos.  
+ [[20_Stack_y_Funciones/index]] - Gestión de pila y funciones.  
+ [[25_Segmentos_de_Memoria/index]] - Secciones `.data`, `.bss`, y variables.  
+ [[30_Entrada_Salida/index]] - Syscalls para entrada/salida.  
+ [[35_Strings_y_Estructuras/index]] - Manipulación de strings y estructuras.  
 
 ### Intermedio
 
 
-- [[40_Debugging_GDB_Objdump/index]] - Debugging con GDB, Objdump, y Ghidra.  
-- [[45_Formato_ELF/index]] - Estructura de binarios ELF.  
-- [[50_Buffer_Overflow/index]] - Desbordamientos de búfer básicos.  
-- [[55_Análisis_de_Malware/index]] - Análisis estático y dinámico de malware.  
-- [[60_Proteccion_y_Evasion/index]] - Mitigaciones (ASLR, NX, Canaries) y evasión.  
-- [[65_Avanzado_Syscalls/index]] - Syscalls complejas (execve, mmap).  
+ [[40_Debugging_GDB_Objdump/index]] - Debugging con GDB, Objdump, y Ghidra.  
+ [[45_Formato_ELF/index]] - Estructura de binarios ELF.  
+ [[50_Buffer_Overflow/index]] - Desbordamientos de búfer básicos.  
+ [[55_Análisis_de_Malware/index]] - Análisis estático y dinámico de malware.  
+ [[60_Proteccion_y_Evasion/index]] - Mitigaciones (ASLR, NX, Canaries) y evasión.  
+ [[65_Avanzado_Syscalls/index]] - Syscalls complejas (execve, mmap).  
 
 
 ### Avanzado
 
-- [[70_ROP/index]] - Return-Oriented Programming (ROP).  
-- [[75_Optimizacion_y_Ofuscacion/index]] - Optimización y ofuscación de código.  
-- [[80_Shellcode/index]] - Desarrollo de shellcode sin null bytes.  
-- [[85_Exploit_Development/index]] - Creación de exploits con pwntools.  
-- [[90_Inyeccion_de_Codigo/index]] - Inyección en memoria, ELF, y procesos.  
-- [[95_Protecciones_Avanzadas/index]] - RELRO, PIE, Fortify Source.  
-- [[100_Shellcode_Injection/index]] - Inyección avanzada de shellcode.  
-- [[105_Proyectos_Avanzados/index]] - Proyectos finales y exploits completos.  
+ [[70_ROP/index]] - Return-Oriented Programming (ROP).  
+ [[75_Optimizacion_y_Ofuscacion/index]] - Optimización y ofuscación de código.  
+ [[80_Shellcode/index]] - Desarrollo de shellcode sin null bytes.  
+ [[85_Exploit_Development/index]] - Creación de exploits con pwntools.  
+ [[90_Inyeccion_de_Codigo/index]] - Inyección en memoria, ELF, y procesos.  
+ [[95_Protecciones_Avanzadas/index]] - RELRO, PIE, Fortify Source.  
+ [[100_Shellcode_Injection/index]] - Inyección avanzada de shellcode.  
+ [[105_Proyectos_Avanzados/index]] - Proyectos finales y exploits completos.  
 
 
 
