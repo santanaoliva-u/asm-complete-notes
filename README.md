@@ -28,18 +28,23 @@ status: stable
 updated_by: TuNombre
 ---
 
+
 # Vault ASM (x86-64, NASM)
 
+![Estado: Estable](https://img.shields.io/badge/Estado-Estable-green)  
+**Repositorio:** [Vault ASM en GitHub](<URL_DEL_REPOSITORIO>)  
+**Ruta:** `~/Documents/OBSIDIAN/Programacion/01_Estudio/03_ASM/`
+
 > [!NOTE]  
-> Guía definitiva para aprender ensamblador x86-64 (NASM) en Arch Linux 2025, desde fundamentos hasta hacking ofensivo. Optimizada para Obsidian con soporte para Dataview, Excalidraw, Canvas, y Codeblock.
+> Guía definitiva para aprender ensamblador x86-64 (NASM) en Arch Linux 2025, desde fundamentos hasta hacking ofensivo. Optimizada para Obsidian con soporte para Dataview, Excalidraw, Canvas, y Codeblock. En GitHub, usa los enlaces relativos para navegar.
 
 > **Arquitectura:** x86-64 (64 bits, sintaxis NASM)  
-> **Entorno:** Arch Linux 2025, NASM, GDB, Radare2, Cutter, pwntools, Docker, QEMU, Ghidra  
-> **Enlaces Clave:** [[Tablas/x86-64_NASM_Ultimate_Cheatsheet]] | [[Tablas/Changelog]]  
+> **Entorno:** Arch Linux 2025, NASM, GDB, Radare2, Cutter, pwntools, Docker, QEMU, Ghidra, checksec  
+> **Enlaces Clave:** [[Tablas/x86-64_NASM_Ultimate_Cheatsheet]] ([Tablas/x86-64_NASM_Ultimate_Cheatsheet.md](Tablas/x86-64_NASM_Ultimate_Cheatsheet.md)) | [[Tablas/Changelog]] ([Tablas/Changelog.md](Tablas/Changelog.md))  
 > **Objetivo:** Dominar ASM para desarrollo, reversing, y hacking ético.
 
-> [!WARNING]  
-> Los niveles 50-100 (buffer overflow, shellcode, inyección) deben ejecutarse **solo** en entornos aislados (Docker, QEMU) para evitar daños al sistema. Ver [[100.02_Inyeccion_en_Stack]].
+> **Advertencia:**  
+> Los niveles 50-100 (buffer overflow, shellcode, inyección) deben ejecutarse **solo** en entornos aislados (Docker, QEMU). Ver [[100.02_Inyeccion_en_Stack]] ([100_Shellcode_Injection/100.02_Inyeccion_en_Stack/Apuntes/100.02_Inyeccion_en_Stack.md](100_Shellcode_Injection/100.02_Inyeccion_en_Stack/Apuntes/100.02_Inyeccion_en_Stack.md)).
 
 ---
 
@@ -55,6 +60,7 @@ updated_by: TuNombre
 - [Recursos Recomendados](#recursos-recomendados)  
 - [Dataview Queries](#dataview-queries)  
 - [Git y Versionado](#git-y-versionado)  
+- [Estado del Proyecto](#estado-del-proyecto)  
 
 ---
 
@@ -62,15 +68,12 @@ updated_by: TuNombre
 
 Este vault es una guía estructurada para aprender ensamblador x86-64 (NASM) en Arch Linux, cubriendo desde conceptos básicos hasta técnicas avanzadas de hacking ofensivo. Cada nivel incluye:  
 - **Archivos `.asm`:** Código fuente comentado.  
-- **Archivos `.md`:** Apuntes teóricos, ejemplos, y enlaces bidireccionales.  
+- **Archivos `.md`:** Apuntes teóricos, ejemplos, y enlaces bidireccionales (Obsidian) o relativos (GitHub).  
 - **Índices (`index.md`):** Resumen de submódulos por nivel.  
-- **Cheatsheet:** [[Tablas/x86-64_NASM_Ultimate_Cheatsheet]] con instrucciones clave.  
+- **Cheatsheet:** [[Tablas/x86-64_NASM_Ultimate_Cheatsheet]] ([Tablas/x86-64_NASM_Ultimate_Cheatsheet.md](Tablas/x86-64_NASM_Ultimate_Cheatsheet.md)).  
 
 > [!TIP]  
-> Usa Canvas en Obsidian para mapear niveles y [[Tablas/x86-64_NASM_Ultimate_Cheatsheet]] para referencias rápidas.
-
-> [!EXCALIDRAW] Mapa de Aprendizaje  
-> Crea un canvas con nodos para cada nivel, conectando al cheatsheet y al changelog. Ver [[20.04_Estructura_de_Funciones]] para diagramas de stack.
+> Usa Canvas en Obsidian para mapear niveles o crea un Excalidraw para visualizar el stack. En GitHub, navega con los enlaces relativos.
 
 ---
 
@@ -78,38 +81,49 @@ Este vault es una guía estructurada para aprender ensamblador x86-64 (NASM) en 
 
 ### Principiante
 
- [[00_MOV_y_Registros_Basicos/index]] - Introducción a MOV y registros.  
- [[05_Operaciones_Aritmeticas/index]] - Sumas, restas, multiplicaciones, y banderas.  
- [[10_Saltos_y_Control_de_Flujo/index]] - Saltos, comparaciones, y bucles.  
- [[15_Logica_y_Manipulacion_de_Bits/index]] - Operaciones lógicas y desplazamientos.  
- [[20_Stack_y_Funciones/index]] - Gestión de pila y funciones.  
- [[25_Segmentos_de_Memoria/index]] - Secciones `.data`, `.bss`, y variables.  
- [[30_Entrada_Salida/index]] - Syscalls para entrada/salida.  
- [[35_Strings_y_Estructuras/index]] - Manipulación de strings y estructuras.  
+<details>
+<summary>Ver Niveles</summary>
+
+- [[00_MOV_y_Registros_Basicos/index]] ([00_MOV_y_Registros_Basicos/index.md](00_MOV_y_Registros_Basicos/index.md)) - Introducción a MOV y registros.  
+- [[05_Operaciones_Aritmeticas/index]] ([05_Operaciones_Aritmeticas/index.md](05_Operaciones_Aritmeticas/index.md)) - Sumas, restas, multiplicaciones, y banderas.  
+- [[10_Saltos_y_Control_de_Flujo/index]] ([10_Saltos_y_Control_de_Flujo/index.md](10_Saltos_y_Control_de_Flujo/index.md)) - Saltos, comparaciones, y bucles.  
+- [[15_Logica_y_Manipulacion_de_Bits/index]] ([15_Logica_y_Manipulacion_de_Bits/index.md](15_Logica_y_Manipulacion_de_Bits/index.md)) - Operaciones lógicas y desplazamientos.  
+- [[20_Stack_y_Funciones/index]] ([20_Stack_y_Funciones/index.md](20_Stack_y_Funciones/index.md)) - Gestión de pila y funciones.  
+- [[25_Segmentos_de_Memoria/index]] ([25_Segmentos_de_Memoria/index.md](25_Segmentos_de_Memoria/index.md)) - Secciones `.data`, `.bss`, y variables.  
+- [[30_Entrada_Salida/index]] ([30_Entrada_Salida/index.md](30_Entrada_Salida/index.md)) - Syscalls para entrada/salida.  
+- [[35_Strings_y_Estructuras/index]] ([35_Strings_y_Estructuras/index.md](35_Strings_y_Estructuras/index.md)) - Manipulación de strings y estructuras.  
+
+</details>
 
 ### Intermedio
 
+<details>
+<summary>Ver Niveles</summary>
 
- [[40_Debugging_GDB_Objdump/index]] - Debugging con GDB, Objdump, y Ghidra.  
- [[45_Formato_ELF/index]] - Estructura de binarios ELF.  
- [[50_Buffer_Overflow/index]] - Desbordamientos de búfer básicos.  
- [[55_Análisis_de_Malware/index]] - Análisis estático y dinámico de malware.  
- [[60_Proteccion_y_Evasion/index]] - Mitigaciones (ASLR, NX, Canaries) y evasión.  
- [[65_Avanzado_Syscalls/index]] - Syscalls complejas (execve, mmap).  
+- [[40_Debugging_GDB_Objdump/index]] ([40_Debugging_GDB_Objdump/index.md](40_Debugging_GDB_Objdump/index.md)) - Debugging con GDB, Objdump, y Ghidra.  
+- [[45_Formato_ELF/index]] ([45_Formato_ELF/index.md](45_Formato_ELF/index.md)) - Estructura de binarios ELF.  
+- [[50_Buffer_Overflow/index]] ([50_Buffer_Overflow/index.md](50_Buffer_Overflow/index.md)) - Desbordamientos de búfer básicos.  
+- [[55_Análisis_de_Malware/index]] ([55_Análisis_de_Malware/index.md](55_Análisis_de_Malware/index.md)) - Análisis estático y dinámico de malware.  
+- [[60_Proteccion_y_Evasion/index]] ([60_Proteccion_y_Evasion/index.md](60_Proteccion_y_Evasion/index.md)) - Mitigaciones (ASLR, NX, Canaries) y evasión.  
+- [[65_Avanzado_Syscalls/index]] ([65_Avanzado_Syscalls/index.md](65_Avanzado_Syscalls/index.md)) - Syscalls complejas (execve, mmap).  
 
+</details>
 
 ### Avanzado
 
- [[70_ROP/index]] - Return-Oriented Programming (ROP).  
- [[75_Optimizacion_y_Ofuscacion/index]] - Optimización y ofuscación de código.  
- [[80_Shellcode/index]] - Desarrollo de shellcode sin null bytes.  
- [[85_Exploit_Development/index]] - Creación de exploits con pwntools.  
- [[90_Inyeccion_de_Codigo/index]] - Inyección en memoria, ELF, y procesos.  
- [[95_Protecciones_Avanzadas/index]] - RELRO, PIE, Fortify Source.  
- [[100_Shellcode_Injection/index]] - Inyección avanzada de shellcode.  
- [[105_Proyectos_Avanzados/index]] - Proyectos finales y exploits completos.  
+<details>
+<summary>Ver Niveles</summary>
 
+- [[70_ROP/index]] ([70_ROP/index.md](70_ROP/index.md)) - Return-Oriented Programming (ROP).  
+- [[75_Optimizacion_y_Ofuscacion/index]] ([75_Optimizacion_y_Ofuscacion/index.md](75_Optimizacion_y_Ofuscacion/index.md)) - Optimización y ofuscación de código.  
+- [[80_Shellcode/index]] ([80_Shellcode/index.md](80_Shellcode/index.md)) - Desarrollo de shellcode sin null bytes.  
+- [[85_Exploit_Development/index]] ([85_Exploit_Development/index.md](85_Exploit_Development/index.md)) - Creación de exploits con pwntools.  
+- [[90_Inyeccion_de_Codigo/index]] ([90_Inyeccion_de_Codigo/index.md](90_Inyeccion_de_Codigo/index.md)) - Inyección en memoria, ELF, y procesos.  
+- [[95_Protecciones_Avanzadas/index]] ([95_Protecciones_Avanzadas/index.md](95_Protecciones_Avanzadas/index.md)) - RELRO, PIE, Fortify Source.  
+- [[100_Shellcode_Injection/index]] ([100_Shellcode_Injection/index.md](100_Shellcode_Injection/index.md)) - Inyección avanzada de shellcode.  
+- [[105_Proyectos_Avanzados/index]] ([105_Proyectos_Avanzados/index.md](105_Proyectos_Avanzados/index.md)) - Proyectos finales y exploits completos.  
 
+</details>
 
 ---
 
@@ -119,7 +133,8 @@ Este vault es una guía estructurada para aprender ensamblador x86-64 (NASM) en 
 
 ```bash
 sudo pacman -Syu
-sudo pacman -S nasm gdb radare2 cutter python-pwntools docker qemu ghidra
+sudo pacman -S nasm gdb radare2 cutter python-pwntools docker qemu-system-x86 ghidra binutils checksec
 yay -S obsidian
 sudo usermod -aG docker $USER
+newgrp docker
 ````
